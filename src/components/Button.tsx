@@ -1,13 +1,27 @@
+import '../style/style.scss'
+
 interface Props {
-  color: string
+  color?: string
+  textColor?: string
   text?: string
+  className: string
+  onClick?: any
+  name?: string
 }
 
-function Button({ color, text }: Props) {
+function Button(props: Props & React.HTMLAttributes<HTMLButtonElement>) {
+  const onClickButton = (name:string):void => console.log(`Hello ${props.name}`)
+
   return (
     <div>
-      <button style={{ backgroundColor: color }}>
-        <span>{ text }</span>
+      <button
+        style={{ backgroundColor: props.color, color: props.textColor }}
+        className={ props.className }
+        onClick={(event: any) => {
+          onClickButton('')
+        }}
+      >
+        <span>{ props.text }</span>
       </button>
     </div>
   )

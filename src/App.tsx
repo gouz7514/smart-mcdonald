@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 
 import Button from './components/Button'
@@ -6,7 +5,7 @@ import Button from './components/Button'
 function App() {
   return (
     <div className="App">
-      <Button color="red" text="hello world"></Button>
+      <Button textColor="white" text="hello world" className="test" name="Kim"></Button>
     </div>
   );
 }
