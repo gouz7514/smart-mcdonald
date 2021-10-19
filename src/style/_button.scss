@@ -1,0 +1,26 @@
+$button-padding: 8px;
+
+%button {
+  border-radius: 4px;
+  padding: $button-padding;
+  border: none;
+
+  span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+button {
+  @extend %button;
+  background-color: orange;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-green {
+  @extend %button;
+  background-color: green;
+}
